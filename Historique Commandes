@@ -1,33 +1,106 @@
-Move-Item -Path Files1 -Destination .\EvenFolder                                                                                                                                         
-Move-Item -Path Files1 -Destination EvenFolder                                                                                                                                           
-cd .\FolderTest1                                                                                                                                                                         
-Move-Item -Path Files1 -Destination EvenFolder1                                                                                                                                          
-mv "File1" C:\EvenFolder                                                                                                                                                                 
-Get-ChildItem                                                                                                                                                                            
-Get-ChildItem -Path C:\EvenFolder                                                                                                                                                        
-mv "File3" et "File5" C:\EvenFolder                                                                                                                                                      
-mv "File3""File5" C:\EvenFolder                                                                                                                                                          
-mv "File3" "File5" C:\EvenFolder                                                                                                                                                         
-mv "File3" C:\EvenFolder                                                                                                                                                                 
-mv "File5" C:\EvenFolder                                                                                                                                                                 
-mv "File2" C:\EvenFolder                                                                                                                                                                 
-mv "File4" C:\EvenFolder                                                                                                                                                                 
-cd                                                                                                                                                                                       
-cd ..                                                                                                                                                                                    
-cd .\EvenFolder                                                                                                                                                                          
-Get-ChildItem -Path C:\EvenFolder                                                                                                                                                        
-mv "File" C:\OddFolder                                                                                                                                                                   
-mv "File4" C:\OddFolder                                                                                                                                                                  
-mv "File4" C:\EvenFolder                                                                                                                                                                 
-mv "File1" C:\OddFolder                                                                                                                                                                  
-mv "File3" C:\OddFolder                                                                                                                                                                  
-mv "File5" C:\OddFolder                                                                                                                                                                  
-cd ..                                                                                                                                                                                    
-cd .\OddFolder                                                                                                                                                                           
-mv "File4" C:\EvenFolder                                                                                                                                                                 
-Get-ChildItem -Path C:\OddFolder                                                                                                                                                         
-cd ..                                                                                                                                                                                    
-cd .\EvenFolder                                                                                                                                                                          
-Get-ChildItem -Path C:\EvenFolder                                                                                                                                                        
-Get-History > historique.txt                                                                                                                                                             
-Get-ChildItem -Path *Folder* -Recurse > listing.txt                                                                                                                                      
+ Id CommandLine                                                                                                                                                                              
+  -- -----------                                                                                                                                                                              
+   1 Get-Location                                                                                                                                                                             
+   2 Get-Host                                                                                                                                                                                 
+   3 Set-Location -Path C:\                                                                                                                                                                   
+   4 Get-Location                                                                                                                                                                             
+   5 New-Item -Path Temp -ItemType Directory                                                                                                                                                  
+   6 Set-Location Temp                                                                                                                                                                        
+   7 Set-Location Temp                                                                                                                                                                        
+   8 New-Item -Path Rep1 -ItemType Directory                                                                                                                                                  
+   9 New-Item -Path Rep2 -ItemType Directory                                                                                                                                                  
+  10 Set-Location C:\Temp                                                                                                                                                                     
+  11 Get-ChildItem                                                                                                                                                                            
+  12 New-Item -Path file1 -ItemType File                                                                                                                                                      
+  13 New-Item -Path file2 -ItemType File                                                                                                                                                      
+  14 New-Item -Path file3 -ItemType File                                                                                                                                                      
+  15 Get-ChildItem                                                                                                                                                                            
+  16 Move-Item -Path file1 -Destination Rep1                                                                                                                                                  
+  17 Get-ChildItem                                                                                                                                                                            
+  18 Get-ChildItem -Path Rep1                                                                                                                                                                 
+  19 Get-ChildItem -Recurse                                                                                                                                                                   
+  20 Move-Item -Path Rep1 -Destination Rep2                                                                                                                                                   
+  21  Get-ChildItem -recurse                                                                                                                                                                  
+  22 Remove-Item -Path file3                                                                                                                                                                  
+  23 Remove-Item Rep2 -Recurse                                                                                                                                                                
+  24 Set-Location -Path C:\...                                                                                                                                                                
+  25 Move-Item -Path Temp -ItemType EvenFolder                                                                                                                                                
+  26 Move-Item -Path EvenFolder                                                                                                                                                               
+  27 Move-Item -Path EvenFolder -ItemType Directory                                                                                                                                           
+  28 clear                                                                                                                                                                                    
+  29 Set-Location -Path C:\...                                                                                                                                                                
+  30 clera                                                                                                                                                                                    
+  31 clear                                                                                                                                                                                    
+  32 Set-Location C:\Temp                                                                                                                                                                     
+  33 Get-ChildItem                                                                                                                                                                            
+  34 Set-Location -Path C:\                                                                                                                                                                   
+  35 Get-Location                                                                                                                                                                             
+  36 Set-Location C:\FolderTest1                                                                                                                                                              
+  37 Get-ChildItem                                                                                                                                                                            
+  38 cd ..                                                                                                                                                                                    
+  39 New-Item -Path EvenFolder -ItemType Directory                                                                                                                                            
+  40 New-Item -Path OddFolder -ItemType Directory                                                                                                                                             
+  41 Move-Item -Path Files1 -Destination .\EvenFolder                                                                                                                                         
+  42 Move-Item -Path Files1 -Destination EvenFolder                                                                                                                                           
+  43 cd .\FolderTest1                                                                                                                                                                         
+  44 Move-Item -Path Files1 -Destination EvenFolder1                                                                                                                                          
+  45 mv "File1" C:\EvenFolder                                                                                                                                                                 
+  46 Get-ChildItem                                                                                                                                                                            
+  47 Get-ChildItem -Path C:\EvenFolder                                                                                                                                                        
+  48 mv "File3" et "File5" C:\EvenFolder                                                                                                                                                      
+  49 mv "File3""File5" C:\EvenFolder                                                                                                                                                          
+  50 mv "File3" "File5" C:\EvenFolder                                                                                                                                                         
+  51 mv "File3" C:\EvenFolder                                                                                                                                                                 
+  52 mv "File5" C:\EvenFolder                                                                                                                                                                 
+  53 mv "File2" C:\EvenFolder                                                                                                                                                                 
+  54 mv "File4" C:\EvenFolder                                                                                                                                                                 
+  55 cd                                                                                                                                                                                       
+  56 cd ..                                                                                                                                                                                    
+  57 cd .\EvenFolder                                                                                                                                                                          
+  58 Get-ChildItem -Path C:\EvenFolder                                                                                                                                                        
+  59 mv "File" C:\OddFolder                                                                                                                                                                   
+  60 mv "File4" C:\OddFolder                                                                                                                                                                  
+  61 mv "File4" C:\EvenFolder                                                                                                                                                                 
+  62 mv "File1" C:\OddFolder                                                                                                                                                                  
+  63 mv "File3" C:\OddFolder                                                                                                                                                                  
+  64 mv "File5" C:\OddFolder                                                                                                                                                                  
+  65 cd ..                                                                                                                                                                                    
+  66 cd .\OddFolder                                                                                                                                                                           
+  67 mv "File4" C:\EvenFolder                                                                                                                                                                 
+  68 Get-ChildItem -Path C:\OddFolder                                                                                                                                                         
+  69 cd ..                                                                                                                                                                                    
+  70 cd .\EvenFolder                                                                                                                                                                          
+  71 Get-ChildItem -Path C:\EvenFolder                                                                                                                                                        
+  72 Get-History > historique.txt                                                                                                                                                             
+  73 Get-ChildItem -Path *Folder* -Recurse > listing.txt                                                                                                                                      
+  74 History                                                                                                                                                                                  
+  75 Get-ChildItem -Path C:\OddFolder                                                                                                                                                         
+  76 Get-ChildItem -Path C:\EvenFolder                                                                                                                                                        
+  77 Remove-Item -Path .\historique.txt                                                                                                                                                       
+  78 Get-ChildItem -Path C:\EvenFolder                                                                                                                                                        
+  79 Remove-Item -Path .\listing.txt                                                                                                                                                          
+  80 Get-ChildItem -Path C:\EvenFolder                                                                                                                                                        
+  81 cd                                                                                                                                                                                       
+  82 C:\FolderTest2                                                                                                                                                                           
+  83   Get-ChildItem -recurse                                                                                                                                                                 
+  84 cd                                                                                                                                                                                       
+  85 cd ..                                                                                                                                                                                    
+  86 cd .\FolderTest2                                                                                                                                                                         
+  87   Get-ChildItem -recurse                                                                                                                                                                 
+  88 mv "File10" C:\EvenFolder                                                                                                                                                                
+  89 mv "File8" C:\EvenFolder                                                                                                                                                                 
+  90 mv "File6" C:\EvenFolder                                                                                                                                                                 
+  91 mv "File7" C:\OddFolder                                                                                                                                                                  
+  92 mv "File0" C:\OddFolder                                                                                                                                                                  
+  93 mv "File9" C:\OddFolder                                                                                                                                                                  
+  94  Get-ChildItem -recurse                                                                                                                                                                  
+  95 cd ..                                                                                                                                                                                    
+  96 cd .\EvenFolder                                                                                                                                                                          
+  97  Get-ChildItem -recurse                                                                                                                                                                  
+  98 sort                                                                                                                                                                                     
+  99  Get-ChildItem -recurse                                                                                                                                                                  
+ 100 cd ..                                                                                                                                                                                    
+ 101 cd .\OddFolder                                                                                                                                                                           
+ 102  Get-ChildItem -recurse                                                                                                                                                                  
+ 103 Get-History > historique.txt                                                                                                                                                             
+ 104 Get-ChildItem -Path *Folder* -Recurse > listing.txt                                                                                                                                   
